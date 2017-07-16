@@ -39,14 +39,25 @@ _defaultCompileMethods = [
   (text, compiler)->
     d = new Date()
     text.replace(/{{year}}/g, d.getFullYear())
-  # {{mm}} token
   (text, compiler)->
     d = new Date()
-    text.replace(/{{mm}}/g, (d.getMonth() + 1))
-  # {{dd}} token
+    text.replace(/{{month}}/g, _compiler.prezero(d.getMonth() + 1))
+
   (text, compiler)->
     d = new Date()
-    text.replace(/{{dd}}/g, (d.getDate()))
+    text.replace(/{{date}}/g, _compiler.prezero(d.getDate()))
+
+  (text, compiler)->
+    d = new Date()
+    text.replace(/{{hour}}/g, _compiler.prezero(d.getHours()))
+
+  (text, compiler)->
+    d = new Date()
+    text.replace(/{{minute}}/g, _compiler.prezero(d.getMinutes()))
+
+  (text, compiler)->
+    d = new Date()
+    text.replace(/{{second}}/g, _compiler.prezero(d.getSeconds()))
   # {{day}} token
   (text, compiler)->
     d = new Date()
@@ -66,14 +77,13 @@ _defaultCompileMethods = [
 
   # {{license-header}} token, get from 'auto-header.license'
   (text, compiler)->
-    lic = atom.config.get('auto-header.license')
-    licenseContent = licenses[lic]
+    licenseContent = (atom.config.get('auto-header.license')).toUpperCase()
 
     unless licenseContent
       atom.notifications.addError('AutoHeader: Unknown license ' + lic)
       return text
 
-    text.replace(/{{license-header}}/g, licenseContent)
+    text.replace(/{{license-header}}/g, 'License: ' + licenseContent)
 ]
 
 # single compiler
