@@ -39,15 +39,21 @@ Here are all of them
 will be replaced by current year
 ### {{mm}}
 will be replaced by the current month
-### {{dd}}
-will be replaced by the current date
 ### {{day}}
-will be replaced by the current weekday
+will be replaced by the current date
+### {{hour}}
+will be replaced by the current hour
+### {{minute}}
+will be replaced by the current minute
+### {{second}}
+will be replaced by the current second
 ### {{author}}
 will be replaced by `auto-header.author` config
 
 ### {{license-header}}
-will be replaced by license header specified by `auto-header.license` config
+<del>will be replaced by license header specified by `auto-header.license` config</del>
+
+uppercase of license name
 
 license can be `'apachev2', 'bsdv2', 'bsdv3', 'gplv2', 'gplv3', 'lgplv2', 'lgplv3', 'mit', 'mplv2'`
 
