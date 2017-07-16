@@ -37,9 +37,9 @@ Here are all of them
 
 ### {{year}}
 will be replaced by current year
-### {{mm}}
+### {{month}}
 will be replaced by the current month
-### {{day}}
+### {{date}}
 will be replaced by the current date
 ### {{hour}}
 will be replaced by the current hour
@@ -47,6 +47,8 @@ will be replaced by the current hour
 will be replaced by the current minute
 ### {{second}}
 will be replaced by the current second
+### {{day}}
+will be replaced by the current day
 ### {{author}}
 will be replaced by `auto-header.author` config
 
