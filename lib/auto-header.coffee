@@ -23,7 +23,7 @@ module.exports = AutoHeader =
       # title: 'template'
       # description: 'the header template, multiple line please modify in config.cson'
       type: 'string'
-      default: 'Copyright (c) {{year}}. Created by {{author}} @ {{year}}-{{month}}-{{day}} {{hour}}:{{minute}}:{{second}}. All Rights Reserved.'
+      default: 'Copyright (c) {{year}}. Created by {{author}} @ {{year}}-{{month}}-{{date}} {{hour}}:{{minute}}:{{second}}. All Rights Reserved.'
 
     # replace by {{author}}
     author:
